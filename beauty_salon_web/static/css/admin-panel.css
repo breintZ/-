@@ -1,0 +1,29 @@
+.admin-panel-container {
+    background-color: #EBE0C9;
+    margin: 50px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.link-admin {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #000000;
+    opacity: .7;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.link-admin:hover {
+    opacity: 1;
+}

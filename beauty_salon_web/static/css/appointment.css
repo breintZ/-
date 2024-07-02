@@ -1,0 +1,101 @@
+.appointment-create-container {
+    width: 600px;
+    background-color: #EBE0C9;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.sale-container {
+    width: 600px;
+    background-color: #EBE0C9;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.appointment-name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 15px;
+}
+
+.appointment-date {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 15px;
+}
+
+.appointment-price {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 15px;
+}
+
+.appointment-create-link, .link-sale {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    opacity: .7;
+    transition: .3s;
+    color: #941A8B;
+    text-decoration: none;
+}
+
+.appointment-create-link:hover, .link-sale:hover {
+    opacity: 1;
+}
+
+.sale-title {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 15px;
+}
+
+.sale-item {
+    width: 45%;
+    background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 15px;
+}
+
+.sale-name {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 15px;
+}
+
+.sale-percent {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 15px;
+}

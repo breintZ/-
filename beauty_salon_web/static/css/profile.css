@@ -1,0 +1,223 @@
+.profile-container {
+    width: 100%;
+}
+
+.profile-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-avatar-container {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.profile-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 500px;
+}
+
+.profile-info {
+    width: 70%;
+    background-color: #EBE0C9;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 10px;
+    border-radius: 10px;
+}
+
+.form-change-image {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-file-label {
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 33px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.custom-file-label:hover {
+    background-color: #941A8B;
+    color: #ffffff;
+}
+
+.custom-file-input {
+    display: none;
+}
+
+.form-group {
+    width: 49%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 10px;
+}
+
+.form-label {
+    width: 100%;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.form-input {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+
+}
+
+.form-save {
+    width: 100%;
+    margin: 10px 0 0;
+}
+
+.form-save-btn {
+    min-width: 100px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: .3s;
+    border: none;
+}
+
+.form-save-btn:hover {
+    background-color: #941A8B;
+    color: #ffffff;
+}
+
+.appointments-container, .sale-container {
+    width: 100%;
+    margin: 15px 0;
+    background-color: #EBE0C9;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.appointments-title, .sale-title {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 15px;
+}
+
+.appointment-item {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+.appointment-name {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.appointment-date {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.appointment-price {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+}
+
+.link-reverse, .link-sale {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000000;
+    opacity: .7;
+    transition: .3s;
+}
+
+.link-reverse:hover, .link-sale:hover {
+    opacity: 1;
+}
+
+.sale-item {
+    width: 24%;
+    background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 15px;
+}
+
+.sale-name {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 15px;
+}
+
+.sale-percent {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 15px;
+}
+
+.message {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: .7;
+}

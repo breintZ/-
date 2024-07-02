@@ -1,0 +1,77 @@
+.service-add-container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #EBE0C9;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-add {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-label {
+    width: 100%;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.form-input {
+    width: 100%;
+    border-radius: 10px;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+}
+
+.form-save {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.form-save-btn {
+    min-width: 100px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s;
+    border: none;
+}
+
+.form-save-btn:hover {
+    background-color: #941A8B;
+    color: #ffffff;
+}

@@ -1,0 +1,47 @@
+{% extends 'salon/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/sale_add.css' %}">
+{% endblock %}
+
+{% block main %}
+    <section class="sale-container">
+        <h1 class="sale-title">Все скидки в системе</h1>
+        <div class="sale-list">
+            {% if sales %}
+                {% for sale in sales %}
+                    <div class="sale-item">
+                        <p class="sale-name">{{ sale.name }}</p>
+                        <p class="sale-percent">Скидка: {{ sale.percent }} %</p>
+                        <p class="sale-user">Доступна для пользователя: {{ sale.user.first_name }} {{ sale.user.second_name }}</p>
+                        <a href="" class="link-delete">Удалить</a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p class="message">В системе нет скидок</p>
+            {% endif %}
+        </div>
+    </section>
+    <section class="sale-add-container">
+           <form action="{% url 'appointments:sale_add' %}" method="post" class="form">
+               <h2 class="form-title">Добавить скидку</h2>
+                {% csrf_token %}
+                <div class="form-block">
+                    <label for="{{ form.name.id_for_label }}" class="label-form">Название скидочной акции</label>
+                    {{ form.name }}
+                </div>
+                <div class="form-block">
+                    <label for="{{ form.percent.id_for_label }}" class="label-form">Процент скидки</label>
+                    {{ form.percent }}
+                </div>
+                <div class="form-block">
+                    <label for="{{ form.user.id_for_label }}" class="label-form">Получатель скидки</label>
+                    {{ form.user }}
+                </div>
+                <div class="form-block-btn">
+                    <button type="submit" class="btn-form">Добавить</button>
+                </div>
+            </form>
+        </section> 
+{% endblock %}

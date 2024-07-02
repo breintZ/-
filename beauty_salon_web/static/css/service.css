@@ -1,0 +1,116 @@
+.services-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 0 20px;
+}
+
+.category-container {
+    width: 25%;
+    background-color: #EBE0C9;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    max-height: 300px;
+}
+
+.category-list {
+    width: 100%;
+}
+
+.category-item {
+    width: 100%;
+    margin: 0 0 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.category-link {
+    width: 100%;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.category-link:hover {
+    background-color: #941A8B;
+    color: #ffffff;
+}
+
+.service-container {
+    width: 75%;
+    background-color: #EBE0C9;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.service-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.service-item {
+    width: 32%;
+    height: 150px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.service-name {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #000000;
+    margin: 0 0 10px;
+}
+
+.service-price {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000000;
+}
+
+.link-service-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 0;
+}
+
+.link-service {
+    background-color: #EBE0C9;
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 15px;
+    color: #000000;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.link-service:hover {
+    background-color: #941A8B;
+    color: #ffffff;
+}

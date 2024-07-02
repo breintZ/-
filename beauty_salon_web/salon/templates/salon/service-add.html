@@ -1,0 +1,31 @@
+{% extends 'salon/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/service-add.css' %}">
+{% endblock %}
+
+{% block main %}
+    <section class="service-add-container">
+        <form action="{% url 'salon:service_add' %}" method="post" class="service-form">
+            {% csrf_token %}
+            <div class="service-add">
+                <div class="form-group">
+                    <label class="form-label" for="{{ form.name.id_for_label }}">Наименование услуги</label>
+                    {{ form.name }}
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="{{ form.category.id_for_label }}">Категория услуги</label>
+                    {{ form.category }}
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="{{ form.price.id_for_label }}">Цена за услугу</label>
+                    {{ form.price }}
+                </div>
+            </div>
+            <div class="form-save">
+                <input class="form-save-btn" type="submit" value="Добавить услугу">
+            </div>
+        </form>
+    </section>
+{% endblock %}

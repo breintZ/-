@@ -1,0 +1,40 @@
+{% extends 'salon/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/service.css' %}">
+{% endblock %}
+
+{% block main %}
+    <section class="services-container">
+        <div class="category-container">
+            <div class="category-list">
+                {% for cat in categoty %}
+                <div class="category-item">
+                    <a href="{% url 'category' cat.id %}" class="category-link">{{ cat.name }}</a>
+                </div>
+                {% endfor %}
+                <div class="category-item">
+                    <a href="{% url 'service' %}" class="category-link">Все услуги</a>
+                </div>
+            </div>
+        </div>
+        <div class="service-container">
+            <div class="service-list">
+                {% for service in services %}
+                    <div class="service-item">
+                        <h2 class="service-name">{{ service.name }}</h2>
+                        <span class="service-price">от {{ service.price }} руб.</span>
+                        <div class="link-service-container">
+                            {% if user.is_superuser or user.is_staff %}
+                            <a href="{% url 'salon:service_delete' service.id %}" class="link-service">Удалить</a>
+                            {% else %}
+                            <a href="{% url 'appointments:date_and_time' service.id %}" class="link-service">Записаться</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

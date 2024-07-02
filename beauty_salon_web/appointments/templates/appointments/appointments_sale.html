@@ -1,0 +1,15 @@
+{% extends 'salon/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/appointment.css' %}">
+{% endblock %}
+
+{% block main %}
+    <section class="appointment-create-container">
+        <h1 class="appointment-name">Услуга: {{ service.name }}</h1>
+        <p class="appointment-date">Дата записи: {{ time.date.date }} : {{ time.time_start }} - {{ time.time_end }}</p>
+        <p class="appointment-price">Цена (с учетом скидки): {{ price }}</p>
+        <a href="{% url 'appointments:appointments_create_sale' time.id service.id sale.id %}" class="appointment-create-link">Записаться</a>
+    </section>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'salon/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/date-and-time.css' %}">
+{% endblock %}
+
+{% block main %}
+    <section class="timetable-container">
+        <h1 class="timetable-title">Выберите свободный промежуток времени</h1>
+        <div class="timetable-list">
+            {% if time %}
+                {% for date in date %}
+                <div class="timetable-item">
+                    <h2 class="timetable-date">Дата: {{ date }}</h2>
+                    <div class="timetable-time-list">
+                        <p class="timetable-time-title">Доступное время:</p>
+                        {% for time in time %}
+                            {% if time.date == date %}
+                                {% if time.status == 0 %}
+                                <div class="timetable-time-item">
+                                    <span class="timetable-time">{{ time.time_start }} - {{ time.time_end }}</span>
+                                    <a href="{% url 'appointments:appointments' time.id service.id %}" class="advertisement-link">Записаться</a>
+                                </div>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <span>Нет доступного времени для записи</span>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

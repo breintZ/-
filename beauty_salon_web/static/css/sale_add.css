@@ -1,0 +1,146 @@
+.sale-container {
+    width: 100%;
+    background-color: #EBE0C9;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sale-add-container {
+    width: 50%;
+    background-color: #EBE0C9;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px auto;
+}
+
+.sale-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin: 0 0 15px;
+}
+
+.form-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 0 15px;
+}
+
+.sale-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.sale-item {
+    width: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.sale-name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 0 15px;
+}
+
+.sale-percent, .sale-user {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin: 0 0 15px;
+}
+
+.link-delete {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    opacity: .7;
+    transition: .3s;
+    color: #941A8B;
+    text-decoration: none;
+}
+
+.link-delete:hover {
+    opacity: 1;
+}
+
+.form {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.form-block {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin: 0 0 15px;
+}
+
+.label-form {
+    width: 100%;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+
+.input-form {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.btn-form {
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-form:hover {
+    background-color: #941A8B;
+    color: #ffffff;
+    border: 1px solid #941A8B;
+}
+
+.form-block-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

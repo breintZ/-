@@ -1,0 +1,40 @@
+{% extends 'salon/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block main %}
+    <section class="login-container">
+        <div class="auth-title">Авторизация</div>
+        <form action="{% url 'users:login' %}" method="post" class="auth-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label class="form-label" for="{{ form.username.id_for_label }}">Имя пользователя</label>
+                {{ form.username }}
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="{{ form.password.id_for_label }}">Пароль</label>
+                {{ form.password }}
+            </div>
+            <div class="form-nav">
+                <input class="auth-button" type="submit" value="Авторизоваться">
+            </div>
+        </form>
+        <div class="registration-container">
+            <a href="{% url 'users:registration' %}" class="reg-button">Нужен аккаунт? Зарегистрируйся!</a>
+        </div>
+    </section>
+    {% if messages or form.non_field_errors %}
+        <div class="{% if messages %}container-successful{% else %}container-errors{% endif %}">
+            {% if messages %}
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            {% else %}
+                {{ form.non_field_errors }}
+            {% endif %}
+        </div>
+        {% endif %}
+{% endblock %}

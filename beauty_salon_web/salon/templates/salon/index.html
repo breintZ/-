@@ -1,0 +1,18 @@
+{% extends 'salon/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block main %}
+    <section class="desc-container">
+        <div class="desc-title-container">
+            <h1 class="desc-title">INNAN — новая студия<br>красоты в сердце Казани</h1>
+            <a href="{% url 'service' %}" class="desc-link">К выбору услуг</a>
+        </div>
+        <div class="desc-img-container">
+            <img src="{% static 'img/desc-background.png' %}" alt="desc-background" class="desc-img">
+        </div>
+    </section>
+{% endblock %}

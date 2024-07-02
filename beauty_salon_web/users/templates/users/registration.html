@@ -1,0 +1,54 @@
+{% extends 'salon/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+{% endblock %}
+
+{% block main %}
+    <section class="reg-container">
+        <div class="reg-title">Регистрация</div>
+        <form action="{% url 'users:registration' %}" method="post" class="reg-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label class="form-label" for="{{ form.first_name.id_for_label }}">Имя</label>
+                {{ form.first_name }}
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="{{ form.last_name.id_for_label }}">Фамилия</label>
+                {{ form.last_name }}
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="{{ form.username.id_for_label }}">Имя пользователя</label>
+                {{ form.username }}
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="{{ form.email.id_for_label }}">Адрес электронной почты</label>
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="{{ form.phone.id_for_label }}">Номер телефона</label>
+                {{ form.phone }}
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="{{ form.password1.id_for_label }}">Пароль</label>
+                {{ form.password1 }}
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="{{ form.password2.id_for_label }}">Подтверждение пароля</label>
+                {{ form.password2 }}
+            </div>
+            <div class="form-nav">
+                <input class="reg-button" type="submit" value="Создать аккаунт">
+            </div>
+        </form>
+        <div class="registration-container">
+            <a href="{% url 'users:login' %}" class="auth-button">Уже есть аккаунт? Авторизоваться</a>
+        </div>
+    </section>
+    {% if form.errors %}
+    <div class="container-errors">
+        {{ form.errors }}
+    </div>
+    {% endif %}
+{% endblock %}

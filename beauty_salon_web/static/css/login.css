@@ -1,0 +1,146 @@
+.login-container {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #EBE0C9;
+    padding: 40px 20px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.auth-title {
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.auth-form {
+    width: 100%;
+    background-color: #d1c8b4;
+    padding: 40px 20px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 10px;
+}
+
+.form-label {
+    width: 100%;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.form-input {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+}
+
+.form-nav {
+    width: 100%;
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-password {
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.link-password:hover {
+    transform: scale(1.03);
+}
+
+.auth-button {
+    width: 180px;
+    height: 40px;
+    color: #000000;
+    background-color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    border: none;
+}
+
+.auth-button:hover {
+    background-color: #941A8B;
+    color: #ffffff;
+}
+
+.registration-container {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.reg-button {
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.reg-button:hover {
+    transform: scale(1.03);
+}
+
+.container-successful {
+    width: 500px;
+    margin: 20px auto;
+    background-color: #cdf564;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container-errors {
+    width: 500px;
+    margin: 20px auto;
+    background-color: #fb7ea8;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}

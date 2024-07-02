@@ -1,0 +1,15 @@
+{% extends 'salon/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/admin-panel.css' %}">
+{% endblock %}
+
+{% block main %}
+    <section class="admin-panel-container">
+        <a href="{% url 'salon:service_add' %}" class="link-admin">Добавить услугу</a>
+        <a href="{% url 'appointments:date_and_time_edit' %}" class="link-admin">Редактировать расписание</a>
+        <a href="{% url 'appointments:sale_add' %}" class="link-admin">Добавить скидку</a>
+        <a href="{% url 'admin:index' %}" class="link-admin">Панель Django</a>
+    </section>
+{% endblock %}

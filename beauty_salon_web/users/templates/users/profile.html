@@ -1,0 +1,79 @@
+{% extends 'salon/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block main %}
+    <section class="profile-container">
+        <form action="{% url 'users:profile' %}" method="post" class="profile-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="profile-avatar-container">
+                <img src="{% if user.image %}
+                    {{ user.image.url }}
+                {% else %}
+                    {% static 'img/avatar.jpg' %}
+                {% endif %}" alt="avatar" class="profile-avatar">
+                <div class="form-change-image">
+                    {{ form.image }}
+                    <label class="custom-file-label" for="{{ form.image.id_for_label }}">Изменить изображение</label>
+                </div>
+            </div>
+            <div class="profile-info">
+                <div class="form-group">
+                    <label class="form-label" for="{{ form.first_name.id_for_label }}">Имя</label>
+                    {{ form.first_name }}
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="{{ form.last_name.id_for_label }}">Фамилия</label>
+                    {{ form.last_name }}
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="{{ form.phone.id_for_label }}">Номер телефона</label>
+                    {{ form.phone }}
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="{{ form.email.id_for_label }}">Адрес электронной почты</label>
+                    {{ form.email }}
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="{{ form.username.id_for_label }}">Имя пользователя</label>
+                    {{ form.username }}
+                </div>
+                <div class="form-save">
+                    <input class="form-save-btn" type="submit" value="Сохранить">
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="sale-container">
+        <h2 class="sale-title">Мои скидки</h2>
+        {% if sales %}
+            {% for sale in sales %}
+                <div class="sale-item">
+                    <div class="sale-name">{{ sale.name }}</div>
+                    <div class="sale-percent">Скидка: {{ sale.percent }} %</div>
+                    <a href="{% url 'service' %}" class="link-sale">Применит скидку</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="message">У вас нет доступных скидок</p>
+        {% endif %}
+    </section>
+    <section class="appointments-container">
+        <h2 class="appointments-title">Мои записи</h2>
+        {% if appointment %}
+            {% for app in appointment %}
+                <div class="appointment-item">
+                    <h3 class="appointment-name">{{ app.service.name }}</h3>
+                    <p class="appointment-date">Дата: {{ app.time.date.date }}: {{ app.time.time_start }} - {{ app.time.time_end }}</p>
+                    <p class="appointment-price">Цена: {{ app.price }} руб.</p>
+                    <a href="{% url 'appointments:appointments_delete' app.id %}" class="link-reverse">Отменить запись</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="message">У вас еще нет записей</p>
+        {% endif %}
+    </section>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends 'salon/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/date-and-time.css' %}">
+{% endblock %}
+
+{% block main %}
+    <section class="timetable-container">
+        <h1 class="timetable-title">Доступные промежутки времени</h1>
+        <div class="timetable-list">
+            {% if time %}
+                {% for date in date %}
+                <div class="timetable-item">
+                    <h2 class="timetable-date">Дата: {{ date }}</h2>
+                    <div class="timetable-time-list">
+                        <p class="timetable-time-title">Доступное время:</p>
+                        {% for time in time %}
+                            {% if time.date == date %}
+                                {% if time.status == 0 %}
+                                <div class="timetable-time-item">
+                                    <span class="timetable-time">{{ time.time_start }} - {{ time.time_end }}</span>
+                                    <a href="{% url 'appointments:date_and_time_delete' time.id %}" class="link-delete">Удалить</a>
+                                </div>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <a href="{% url 'appointments:date_delete' date.id %}" class="link-delete">Удалить дату</a>
+                </div>
+                {% endfor %}
+            {% else %}
+                <span>Нет доступного времени для записи</span>
+            {% endif %}
+        </div>
+    </section>
+    <section class="date-and-time-add">
+        <div class="date-add-container">
+            <h2 class="date-add-title">Добавить новую дату в расписание</h2>
+            <form action="{% url 'appointments:date_and_time_edit' %}" method="post">
+                {% csrf_token %}
+                <div class="form-block">
+                    <label for="{{ form_date.date.id_for_label }}" class="label-form">Выберите дату (дата.месяц.год)</label>
+                    {{ form_date.date }}
+                </div>
+                <div class="form-block">
+                    <button type="submit" class="btn-form">Добавить</button>
+                </div>
+            </form>
+        </div>
+        <div class="time-add-container">
+            <h2 class="time-add-title">Добавить новое время в расписание</h2>
+            <form action="{% url 'appointments:date_and_time_edit' %}" method="post">
+                {% csrf_token %}
+                <div class="form-block">
+                    <label for="{{ form_time.date.id_for_label }}" class="label-form">Выберите дату</label>
+                    {{ form_time.date }}
+                </div>
+                <div class="form-block">
+                    <label for="{{ form_time.time_start.id_for_label }}" class="label-form">Выберите начало</label>
+                    {{ form_time.time_start }}
+                </div>
+                <div class="form-block">
+                    <label for="{{ form_time.time_end.id_for_label }}" class="label-form">Выберите конец</label>
+                    {{ form_time.time_end }}
+                </div>
+                <div class="form-block">
+                    <button type="submit" class="btn-form">Добавить</button>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}
